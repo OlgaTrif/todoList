@@ -135,4 +135,6 @@ public class TaskController {
         log.info(String.format(COMPLETE_TASK_REQUEST, id));
         return REDIRECT_TO_TASKS;
     }
+
+    //TODO: Урок 6. Проектирование и реализация API для серверного приложения. время 40:47
 }
