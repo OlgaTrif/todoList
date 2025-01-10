@@ -38,7 +38,6 @@ public class TaskRepository {
         this.updateTaskSql = databaseConfig.getUpdateTaskSql();
         this.deleteTaskSql = databaseConfig.getDeleteTaskSql();
     }
-    //TODO: Урок 6. Проектирование и реализация API для серверного приложения. время 40:47
 
     /**
      * Метод для получения списка всех задач из БД
