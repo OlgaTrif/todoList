@@ -44,6 +44,12 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>6.2.0</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>6.1.12</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>

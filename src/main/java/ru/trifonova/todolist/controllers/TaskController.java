@@ -1,4 +1,4 @@
-package ru.trifonova.todolist.controller;
+package ru.trifonova.todolist.controllers;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ru.trifonova.todolist.model.Task;
-import ru.trifonova.todolist.service.TaskService;
+import ru.trifonova.todolist.services.TaskService;
 
 import java.util.List;
 
@@ -99,7 +99,7 @@ public class TaskController {
         Task task = taskService.getTaskById(id);
         task.setTitle(editTask.getTitle());
         task.setDescription(editTask.getDescription());
-        task.setCompleted(editTask.getCompleted());
+        task.setCompleted(editTask.isCompleted());
         task.setCompletedAt(editTask.getCompletedAt());
         taskService.updateTask(task);
         log.info(String.format(TASK_UPDATED_INFO, id));
@@ -135,6 +135,4 @@ public class TaskController {
         log.info(String.format(COMPLETE_TASK_REQUEST, id));
         return REDIRECT_TO_TASKS;
     }
-
-    //TODO: Урок 6. Проектирование и реализация API для серверного приложения. время 40:47
 }
