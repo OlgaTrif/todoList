@@ -32,6 +32,16 @@
     </style>
 </head>
 <body>
+<h1>Создать новую задачу</h1>
+<form method="post" th:action="@{/tasks}">
+    <label for="title">Заголововок</label>
+    <input type="text" id="title" name="title">
+    <br>
+    <label for="description">Описание</label>
+    <textarea id="description" th:field="descriotion"></textarea>
+    <br>
+    <button type="submit">Создать</button>
+</form>>
 
 </body>
 </html>
