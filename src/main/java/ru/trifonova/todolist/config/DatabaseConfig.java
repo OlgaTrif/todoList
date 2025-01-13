@@ -17,6 +17,4 @@ public class DatabaseConfig {
     private String saveTaskSql;
     private String updateTaskSql;
     private String deleteTaskSql;
-
-    //TODO: урок 6 41:25
 }
