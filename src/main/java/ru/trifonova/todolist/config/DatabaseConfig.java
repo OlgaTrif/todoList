@@ -10,7 +10,7 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @Data
-@ConfigurationProperties
+@ConfigurationProperties("database")
 public class DatabaseConfig {
     private String findAllTasksSql;
     private String findTaskByIdSql;

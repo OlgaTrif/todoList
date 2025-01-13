@@ -7,6 +7,7 @@ import ru.trifonova.todolist.config.DatabaseConfig;
 
 @SpringBootApplication
 @EnableConfigurationProperties(DatabaseConfig.class)
+//@SpringBootApplication(exclude = {DatabaseConfig.class})
 public class TodolistApplication {
 
 	public static void main(String[] args) {

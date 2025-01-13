@@ -9,13 +9,13 @@ CREATE TABLE if NOT EXISTS tasks (
 
 --Заполним таблицу тестовыми значениями
 INSERT INTO tasks (title, description, createdAt, completed, completedAt)
-VALUES('Задача 1', 'Тестовая задача 1', CURDATE(), 0, NULL)
+VALUES('Задача 1', 'Описание задачи 1', CURDATE(), 0, NULL)
 
 INSERT INTO tasks (title, description, createdAt, completed, completedAt)
-VALUES('Задача 2', 'Тестовая задача 2', CURDATE(), 0, NULL)
+VALUES('Задача 2', 'Описание задачи 2', CURDATE(), 0, NULL)
 
 INSERT INTO tasks (title, description, createdAt, completed, completedAt)
-VALUES('Задача 3', 'Тестовая задача 3', CURDATE(), 1, CURDATE())
+VALUES('Задача 3', 'Описание задачи 3', CURDATE(), 1, CURDATE())
 
 INSERT INTO tasks (title, description, createdAt, completed, completedAt)
-VALUES('Задача 4', 'Тестовая задача 4', CURDATE(), 1, CURDATE())
+VALUES('Задача 4', 'Описание задачи 4', CURDATE(), 1, CURDATE())
