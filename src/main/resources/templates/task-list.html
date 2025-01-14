@@ -32,22 +32,22 @@
         .complete-button {
            margin-left: 10px;
            padding: 5px 10px;
-           background-color: #4CAF50;
+           background-color: #32CD32;
            color: white;
            border: none;
            border-radius: 3px;
            cursor: pointer;
         }
 
-        edit-link {
+        .edit-link {
            margin-left: 10px;
            color: #333;
         }
 
-        delete-button {
+        .delete-button {
            margin-left: 10px;
            padding: 5px 10px;
-           background-color: #ff0000;
+           background-color: #CD5C5C;
            color: white;
            border: none;
            border-radius: 3px;
@@ -71,10 +71,9 @@
 
             <a class="edit-link" th:href="@{/tasks/{id}/edit(id=${task.id})}">Редактировать</a>
 
-
             <form th:action="@{/tasks/{id}/delete(id=${task.id})}" method="post" style="...">
-            <button class="delete-button" type="submit">Удалить</button>
-        </form>
+                <button class="delete-button" type="submit">Удалить</button>
+            </form>
         </div>
     </div>
 </div>

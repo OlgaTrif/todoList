@@ -35,7 +35,7 @@ public class TaskController {
     public String showTasks(Model model) {
         log.info(TASKS_LIST_REQUEST);
         List<Task> tasksList = taskService.getAllTasks();
-        log.info(String.format(REQUEST_FROM_BD_INFO, tasksList.size()));
+        log.info(String.format(REQUEST_TASK_FROM_BD_INFO, tasksList.size()));
         model.addAttribute(TASKS, tasksList);
         return TASK_LIST;
     }
@@ -81,7 +81,7 @@ public class TaskController {
     public String showEditTaskForm(@PathVariable("id") Long id, Model model) {
         log.info(String.format(EDIT_TASK_REQUEST_FORM, id));
         Task task = taskService.getTaskById(id);
-        model.addAttribute("task", task);
+        model.addAttribute(TASK, task);
         return EDIT_TASK;
     }
 
@@ -125,7 +125,7 @@ public class TaskController {
     /**
      * Метод для обработки запроса на отметку задачи как выполненной
      *
-     * @param id уникальный номер задачи для удаления
+     * @param id уникальный номер задачи для отметки
      * @return Редирект на страницу списка задач после создания задачи
      * */
 
