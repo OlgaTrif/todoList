@@ -1,12 +1,11 @@
 package ru.trifonova.todolist.controllers;
 
 import lombok.AllArgsConstructor;
-import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import ru.trifonova.todolist.model.Task;
+import ru.trifonova.todolist.models.Task;
 import ru.trifonova.todolist.services.TaskService;
 
 import java.util.List;
@@ -99,6 +98,7 @@ public class TaskController {
         log.info(String.format(EDIT_TASK_REQUEST, id));
         Task task = taskService.getTaskById(id);
         task.setTitle(editTask.getTitle());
+        task.setProjectId(editTask.getProjectId());
         task.setDescription(editTask.getDescription());
         task.setCompleted(editTask.isCompleted());
         task.setCompletedAt(editTask.getCompletedAt());
@@ -133,7 +133,7 @@ public class TaskController {
     public String completeTask(@PathVariable("id") Long id) {
         log.info(String.format(COMPLETE_TASK_REQUEST, id));
         taskService.completeTask(id);
-        log.info(String.format(COMPLETE_TASK_REQUEST, id));
+        log.info(String.format(COMPLETE_TASK_INFO, id));
         return REDIRECT_TO_TASKS;
     }
 }

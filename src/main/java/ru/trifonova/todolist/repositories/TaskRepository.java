@@ -3,7 +3,7 @@ package ru.trifonova.todolist.repositories;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import ru.trifonova.todolist.config.DatabaseConfig;
-import ru.trifonova.todolist.model.Task;
+import ru.trifonova.todolist.models.Task;
 
 import java.util.List;
 

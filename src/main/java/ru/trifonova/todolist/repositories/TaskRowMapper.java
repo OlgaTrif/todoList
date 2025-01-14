@@ -1,7 +1,7 @@
 package ru.trifonova.todolist.repositories;
 
 import org.springframework.jdbc.core.RowMapper;
-import ru.trifonova.todolist.model.Task;
+import ru.trifonova.todolist.models.Task;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

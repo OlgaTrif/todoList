@@ -1,4 +1,4 @@
-package ru.trifonova.todolist.model;
+package ru.trifonova.todolist.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,8 +15,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Task {
-
     private Long id;
+    private Long projectId;
     private String title;
     private String description;
     private LocalDate createdAt;

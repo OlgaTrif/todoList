@@ -2,7 +2,7 @@ package ru.trifonova.todolist.services;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.trifonova.todolist.model.Task;
+import ru.trifonova.todolist.models.Task;
 import ru.trifonova.todolist.repositories.TaskRepository;
 
 import java.time.LocalDate;
