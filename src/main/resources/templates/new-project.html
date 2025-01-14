@@ -2,7 +2,7 @@
 <html xmlns:th="https://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Создать задачу</title>
+    <title>Создать проект</title>
     <style>
         h1 {
            color: #333;
@@ -32,8 +32,8 @@
     </style>
 </head>
 <body>
-<h1>Создать новую задачу</h1>
-<form method="post" th:action="@{/tasks}">
+<h1>Создать новый проект</h1>
+<form method="post" th:action="@{/projects}">
     <label for="title">Заголововок</label>
     <input type="text" id="title" name="title">
     <br>

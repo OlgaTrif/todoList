@@ -2,7 +2,7 @@
 <html xmlns:th="https://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Редактировать задачу</title>
+    <title>Редактировать проект</title>
     <style>
         h1 {
            color: #333;
@@ -32,14 +32,14 @@
     </style>
 </head>
 <body>
-<h1>Редактировать задачу</h1>
-<form method="post" th:action="@{/tasks/{id}/edit(id=${task.id})}">
+<h1>Редактировать проект</h1>
+<form method="post" th:action="@{/projects/{id}/edit(id=${task.id})}">
     <input type="hidden" th:field="*{id}">
     <label for="title">Заголововок</label>
-    <input type="text" id="title" th:field="*{task.title}">
+    <input type="text" id="title" th:field="*{project.title}">
     <br>
     <label for="description">Описание</label>
-    <textarea id="description" th:field="*{task.descriotion}"></textarea>
+    <textarea id="description" th:field="*{project.description}"></textarea>
     <br>
     <button type="submit">Сохранить</button>
 </form>>
