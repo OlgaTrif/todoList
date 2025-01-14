@@ -64,8 +64,8 @@ public class TaskRepository {
      * @param task Задача для сохранения
      * */
     public void save(Task task){
-        jdbcTemplate.update(saveTaskSql, task.getTitle(), task.getDescription(), task.getCreatedAt(),
-                task.isCompleted(),task.getCompletedAt());
+        jdbcTemplate.update(saveTaskSql, task.getProjectId(), task.getTitle(), task.getDescription(),
+                task.getCreatedAt(), task.isCompleted(),task.getCompletedAt());
     }
 
     /**
@@ -74,7 +74,7 @@ public class TaskRepository {
      * @param task Задача для обновления
      * */
     public void update(Task task){
-        jdbcTemplate.update(updateTaskSql, task.getTitle(), task.getDescription(), task.getCreatedAt(),
+        jdbcTemplate.update(updateTaskSql, task.getProjectId(), task.getTitle(), task.getDescription(), task.getCreatedAt(),
                 task.isCompleted(),task.getCompletedAt(), task.getId());
     }
 
