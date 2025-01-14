@@ -66,7 +66,7 @@
         <br>
         <div class="container-buttons">
             <form th:action="@{/projects/{id}/close(id=${project.id})}" method="post" style="...">
-                <button class="close-button" type="submit" th:if="${!task.closed}">Закрыть</button>
+                <button class="close-button" type="submit" th:if="${!project.closed}">Закрыть</button>
             </form>
 
             <a class="edit-link" th:href="@{/projects/{id}/edit(id=${project.id})}">Редактировать</a>
