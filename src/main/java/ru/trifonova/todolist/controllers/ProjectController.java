@@ -31,7 +31,6 @@ public class ProjectController {
      * @param model объект Model для передачи данных в представление
      * @return Имя представления для отображения списка проектов
      * */
-
     @GetMapping
     public String showProjects(Model model) {
         log.info(PROJECTS_LIST_REQUEST);
@@ -47,7 +46,6 @@ public class ProjectController {
      * @param model объект Model для передачи данных в представление
      * @return Имя представления для создания нового проекта
      * */
-
     @GetMapping("/new")
     public String createProject(Model model) {
         log.info(NEW_PROJECT_FORM_REQUEST);
@@ -61,7 +59,6 @@ public class ProjectController {
      * @param project создаваемый проект
      * @return Редирект на страницу списка проектов после создания задачи
      * */
-
     @PostMapping
     public String createProject(Project project) {
         log.info(String.format(NEW_PROJECT_REQUEST, project.getTitle()));
@@ -77,7 +74,6 @@ public class ProjectController {
      * @param model объект Model для передачи данных в представление
      * @return Имя представления для редактирования проекта
      * */
-
     @GetMapping("/{id}/edit")
     public String showEditTaskForm(@PathVariable("id") Long id, Model model) {
         log.info(String.format(EDIT_PROJECT_REQUEST_FORM, id));
@@ -93,7 +89,6 @@ public class ProjectController {
      * @param editProject проект с обновленными данными
      * @return Редирект на страницу списка проектов после создания задачи
      * */
-
     @PostMapping("/{id}/edit")
     public String editProject(@PathVariable("id") Long id, @ModelAttribute Project editProject) {
         log.info(String.format(EDIT_PROJECT_REQUEST, id));
@@ -113,7 +108,6 @@ public class ProjectController {
      * @param id уникальный номер проекта для удаления
      * @return Редирект на страницу списка проектов после создания проекта
      * */
-
     @PostMapping("/{id}/delete")
     public String deleteTask(@PathVariable("id") Long id) {
         log.info(String.format(DELETE_PROJECT_REQUEST, id));
@@ -128,8 +122,7 @@ public class ProjectController {
      * @param id уникальный номер проекта для отметки
      * @return Редирект на страницу списка проектов после отметки проекта закрытым/завершённым
      * */
-
-    @PostMapping("/{id}/complete")
+    @PostMapping("/{id}/close")
     public String completeTask(@PathVariable("id") Long id) {
         log.info(String.format(CLOSE_PROJECT_REQUEST, id));
         projectService.closeProject(id);

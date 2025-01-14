@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Список проектов</title>
+    <style>
+        h1 {
+           color: #333;
+        }
+
+        .project {
+           margin-bottom: 10px;
+           padding: 10px;
+           border: 1px solid #ccc;
+           background-color: #f8f8f8;
+        }
+
+        .container-buttons {
+           display: flex;
+           justify-content: start;
+        }
+
+        .closed {
+           text-decoration: line-through;
+           background-color: #f0f0f0;
+        }
+
+        .project-title {
+           display: inline-block;
+        }
+
+        .close-button {
+           margin-left: 10px;
+           padding: 5px 10px;
+           background-color: #32CD32;
+           color: white;
+           border: none;
+           border-radius: 3px;
+           cursor: pointer;
+        }
+
+        .edit-link {
+           margin-left: 10px;
+           color: #333;
+        }
+
+        .delete-button {
+           margin-left: 10px;
+           padding: 5px 10px;
+           background-color: #CD5C5C;
+           color: white;
+           border: none;
+           border-radius: 3px;
+           cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>Список проектов</h1>
+<div th:each="projects : ${projects}" th:class="${project.closed} ? 'closed'">
+    <div class="project">
+        <span class="project.title" th:text="${project.title}"> - </span>
+        <span th:text="${project.description}"></span>
+        <br>
+        Дата создания: <span th:text="${project.createdAt}"></span>
+        <br>
+        <div class="container-buttons">
+            <form th:action="@{/project/{id}/close(id=${project.id})}" method="post" style="...">
+                <button class="close-button" type="submit" th:if="${!task.closed}">Закрыть</button>
+            </form>
+
+            <a class="edit-link" th:href="@{/project/{id}/edit(id=${project.id})}">Редактировать</a>
+
+            <form th:action="@{/project/{id}/delete(id=${project.id})}" method="post" style="...">
+                <button class="delete-button" type="submit">Удалить</button>
+            </form>
+        </div>
+    </div>
+</div>
+<a href="/projects/new">Добавить проект</a>
+</body>
+</html>

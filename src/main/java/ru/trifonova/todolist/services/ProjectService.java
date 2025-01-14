@@ -1,7 +1,6 @@
 package ru.trifonova.todolist.services;
 
 import ru.trifonova.todolist.models.Project;
-import ru.trifonova.todolist.models.Task;
 import ru.trifonova.todolist.repositories.ProjectRepository;
 
 import java.time.LocalDate;

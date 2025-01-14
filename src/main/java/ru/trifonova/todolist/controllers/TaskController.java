@@ -30,7 +30,6 @@ public class TaskController {
      * @param model объект Model для передачи данных в представление
      * @return Имя представления для отображения списка задач
      * */
-
     @GetMapping
     public String showTasks(Model model) {
         log.info(TASKS_LIST_REQUEST);
@@ -46,7 +45,6 @@ public class TaskController {
      * @param model объект Model для передачи данных в представление
      * @return Имя представления для создания новой задачи
      * */
-
     @GetMapping("/new")
     public String createTask(Model model) {
         log.info(NEW_TASK_FORM_REQUEST);
@@ -60,7 +58,6 @@ public class TaskController {
      * @param task создаваемая задача
      * @return Редирект на страницу списка задач после создания задачи
      * */
-
     @PostMapping
     public String createTask(Task task) {
         log.info(String.format(NEW_TASK_REQUEST, task.getTitle()));
@@ -76,7 +73,6 @@ public class TaskController {
      * @param model объект Model для передачи данных в представление
      * @return Имя представления для редактирования задачи
      * */
-
     @GetMapping("/{id}/edit")
     public String showEditTaskForm(@PathVariable("id") Long id, Model model) {
         log.info(String.format(EDIT_TASK_REQUEST_FORM, id));
@@ -92,7 +88,6 @@ public class TaskController {
      * @param editTask задача с обновленными данными
      * @return Редирект на страницу списка задач после создания задачи
      * */
-
     @PostMapping("/{id}/edit")
     public String editTask(@PathVariable("id") Long id, @ModelAttribute Task editTask) {
         log.info(String.format(EDIT_TASK_REQUEST, id));
@@ -113,7 +108,6 @@ public class TaskController {
      * @param id уникальный номер задачи для удаления
      * @return Редирект на страницу списка задач после создания задачи
      * */
-
     @PostMapping("/{id}/delete")
     public String deleteTask(@PathVariable("id") Long id) {
         log.info(String.format(DELETE_TASK_REQUEST, id));
@@ -128,7 +122,6 @@ public class TaskController {
      * @param id уникальный номер задачи для отметки
      * @return Редирект на страницу списка задач после создания задачи
      * */
-
     @PostMapping("/{id}/complete")
     public String completeTask(@PathVariable("id") Long id) {
         log.info(String.format(COMPLETE_TASK_REQUEST, id));
