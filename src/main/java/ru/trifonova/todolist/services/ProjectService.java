@@ -1,5 +1,7 @@
 package ru.trifonova.todolist.services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import ru.trifonova.todolist.models.Project;
 import ru.trifonova.todolist.repositories.ProjectRepository;
 
@@ -11,6 +13,8 @@ import java.util.List;
  * Обеспечивает взаимодействие между контроллерами и репозиториями для выполнения операций над проектами.
  * */
 
+@Service
+@AllArgsConstructor
 public class ProjectService {
 
     private ProjectRepository projectRepository;
