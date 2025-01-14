@@ -29,7 +29,7 @@ INSERT INTO database.projects (title, description, createdAt, closed, closedAt)
 VALUES ('Проект 2', 'Описание проекта 2', CURDATE(), 0, NULL);
 
 INSERT INTO database.projects (title, description, createdAt, closed, closedAt)
-VALUES ('Проект 1', 'Описание проекта 1', CURDATE(), 1, CURDATE());
+VALUES ('Проект 3', 'Описание проекта 3', CURDATE(), 1, CURDATE());
 
 select * from database.projects;
 
