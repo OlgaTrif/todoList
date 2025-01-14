@@ -36,8 +36,8 @@ public class Extra {
 
     //direct
     public static final String PROJECT = "project";
-    public static final String PROJECTS = "tprojects";
-    public static final String PROJECT_LIST = "tproject-list";
+    public static final String PROJECTS = "projects";
+    public static final String PROJECT_LIST = "project-list";
     public static final String NEW_PROJECT = "new-project";
     public static final String EDIT_PROJECT = "edit-project";
     public static final String REDIRECT_TO_PROJECTS = "redirect:/projects";
