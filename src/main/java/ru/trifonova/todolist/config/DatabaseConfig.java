@@ -12,6 +12,13 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @Data
 @ConfigurationProperties("database")
 public class DatabaseConfig {
+    //projects
+    private String findAllProjectsSql;
+    private String findProjectByIdSql;
+    private String saveProjectSql;
+    private String updateProjectSql;
+    private String deleteProjectSql;
+    //tasks
     private String findAllTasksSql;
     private String findTaskByIdSql;
     private String saveTaskSql;
