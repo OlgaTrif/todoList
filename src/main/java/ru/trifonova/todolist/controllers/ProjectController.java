@@ -35,7 +35,7 @@ public class ProjectController {
     @GetMapping
     public String showProjects(Model model) {
         log.info(PROJECTS_LIST_REQUEST);
-        List<Task> tasksList = projectService.getAllProjects();
+        List<Project> tasksList = projectService.getAllProjects();
         log.info(String.format(REQUEST_PROJ_FROM_BD_INFO, tasksList.size()));
         model.addAttribute(PROJECTS, tasksList);
         return PROJECT_LIST;

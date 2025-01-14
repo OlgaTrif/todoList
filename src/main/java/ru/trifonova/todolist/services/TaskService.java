@@ -62,12 +62,17 @@ public class TaskService {
     /**
      * Метод для удаления существующей задачи.
      *
-     * @param id Задача, которую нужно удалить.
+     * @param id Идентификатор задачи, которую нужно удалить.
      * */
     public void deleteTask(Long id) {
         taskRepository.delete(id);
     }
 
+    /**
+     * Метод для отметки задачи как выполненной.
+     *
+     * @param id Идентификатор задачи, которую нужно отметить.
+     * */
     public void completeTask(Long id) {
         Task task = taskRepository.findById(id);
         if (task != null) {
