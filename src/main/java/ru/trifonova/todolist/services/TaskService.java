@@ -44,7 +44,7 @@ public class TaskService {
      * @param task Новая задача.
      * */
     public void createTask(Task task) {
-        task.setCreateAt(LocalDate.now());
+        task.setCreatedAt(LocalDate.now());
         task.setCompleted(false);
         task.setCompletedAt(null);
         taskRepository.save(task);

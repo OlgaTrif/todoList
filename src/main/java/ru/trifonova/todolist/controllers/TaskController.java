@@ -2,6 +2,7 @@ package ru.trifonova.todolist.controllers;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +18,7 @@ import static ru.trifonova.todolist.extra.Extra.*;
  * */
 
 @Controller
-@Log
+@Slf4j
 @AllArgsConstructor
 @RequestMapping("/tasks")
 public class TaskController {
@@ -57,7 +58,7 @@ public class TaskController {
     /**
      * Метод для обработки запроса на создание новой задачи
      *
-     * @param task создавыаемая задача
+     * @param task создаваемая задача
      * @return Редирект на страницу списка задач после создания задачи
      * */
 
