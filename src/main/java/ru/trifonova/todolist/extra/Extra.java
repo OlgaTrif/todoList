@@ -24,11 +24,11 @@ public class Extra {
     //result info
     public static final String REQUEST_PROJ_FROM_BD_INFO = "Получено %d проектов из БД.";
     public static final String CLOSE_PROJECT_INFO = "Проект с id = %d отмечен как закрытый.";
-    public static final String PROJECT_CREATED_INFO = "Создан новый проект: id = %s.";
+    public static final String PROJECT_CREATED_INFO = "Создан новый проект: title = %s.";
     public static final String PROJECT_UPDATED_INFO = "Проект id = %d успешно отредактирован.";
     public static final String PROJECT_DELETED_INFO = "Проект id = %d успешно удален.";
 
-    public static final String TASK_CREATED_INFO = "Создана новая задача: id = %s.";
+    public static final String TASK_CREATED_INFO = "Создана новая задача: title = %s.";
     public static final String TASK_UPDATED_INFO = "Задача id = %d успешно отредактирована.";
     public static final String TASK_DELETED_INFO = "Задача id = %d успешно удалена.";
     public static final String REQUEST_TASK_FROM_BD_INFO = "Получено %d задач из БД.";
