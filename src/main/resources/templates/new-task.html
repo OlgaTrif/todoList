@@ -35,7 +35,7 @@
 <h1>Создать новую задачу</h1>
 <form method="post" th:action="@{/tasks}">
     <label for="projectId">Идентификатор проекта</label>
-    <input type="number" id="projectId" name="projectId">
+    <input type="number" min="1" id="projectId" name="projectId">
     <label for="title">Заголововок</label>
     <input type="text" id="title" name="title">
     <br>
