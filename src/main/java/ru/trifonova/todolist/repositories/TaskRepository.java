@@ -18,7 +18,7 @@ public class TaskRepository {
     private JdbcTemplate jdbcTemplate;
 
     private String findAllTasksSql;
-    private String findTasksByIdSql;
+    private String findTaskByIdSql;
     private String saveTaskSql;
     private String updateTaskSql;
     private String deleteTaskSql;
@@ -33,7 +33,7 @@ public class TaskRepository {
     public TaskRepository(JdbcTemplate jdbcTemplate, DatabaseConfig databaseConfig) {
         this.jdbcTemplate = jdbcTemplate;
         this.findAllTasksSql = databaseConfig.getFindAllTasksSql();
-        this.findTasksByIdSql = databaseConfig.getFindTaskByIdSql();
+        this.findTaskByIdSql = databaseConfig.getFindTaskByIdSql();
         this.saveTaskSql = databaseConfig.getSaveTaskSql();
         this.updateTaskSql = databaseConfig.getUpdateTaskSql();
         this.deleteTaskSql = databaseConfig.getDeleteTaskSql();
@@ -55,7 +55,7 @@ public class TaskRepository {
      * @return Задача с уникальным идентификатором
      * */
     public Task findById(Long id){
-        return jdbcTemplate.queryForObject(findTasksByIdSql, new TaskRowMapper());
+        return jdbcTemplate.queryForObject(findTaskByIdSql, new TaskRowMapper(), id);
     }
 
     /**
@@ -75,7 +75,7 @@ public class TaskRepository {
      * */
     public void update(Task task){
         jdbcTemplate.update(updateTaskSql, task.getProjectId(), task.getTitle(), task.getDescription(), task.getCreatedAt(),
-                task.isCompleted(),task.getCompletedAt(), task.getId());
+                task.isCompleted(), task.getCompletedAt(), task.getId());
     }
 
     /**
