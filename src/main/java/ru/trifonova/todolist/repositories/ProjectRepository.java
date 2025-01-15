@@ -55,7 +55,7 @@ public class ProjectRepository {
      * @return Проект с уникальным идентификатором
      * */
     public Project findById(Long id){
-        return jdbcTemplate.queryForObject(findProjectByIdSql, new ProjectRowMapper());
+        return jdbcTemplate.queryForObject(findProjectByIdSql, new ProjectRowMapper(), id);
     }
 
     /**

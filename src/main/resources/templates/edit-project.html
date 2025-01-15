@@ -33,7 +33,7 @@
 </head>
 <body>
 <h1>Редактировать проект</h1>
-<form method="post" th:action="@{/projects/{id}/edit(id=${task.id})}">
+<form method="post" th:action="@{/projects/{id}/edit(id=${project.id})}">
     <input type="hidden" th:field="*{id}">
     <label for="title">Заголововок</label>
     <input type="text" id="title" th:field="*{project.title}">
